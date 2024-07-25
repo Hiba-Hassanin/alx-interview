@@ -7,15 +7,16 @@ returns empty list if n <= 0
 """
 
 def pascal_triangle(n):
-    pascal = []
+    new_pascal = []
     if n <= 0:
-        return pascal
-    pascal = [[1]]
-    for i in range(1, n):
-        temp = [1]
-        for j in range(len(pascal[i - 1]) - 1):
-            curr = pascal[i - 1]
-            temp.append(pascal[i - 1][j] + pascal[i - 1][j + 1])
-        temp.append(1)
-        pascal.append(temp)
-    return pascal
+        return new_pascal
+
+    for i in range(n):
+        row_index = [1]
+        if new_pascal:
+            final_row = new_pascal[-1]
+            row_index.extend([sum(pair) for pair in
+                              zip(final_row, final_row[1:])])
+            row_index.append(1)
+        new_pascal.append(row_index)
+        return (new_pascal)
