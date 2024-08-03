@@ -7,9 +7,5 @@ This project contains a Python function `canUnlockAll(boxes)` which determines i
 - Python 3.x
 - PEP 8 compliant code
 
-## Usage
-
-To test the function, run `main_0.py`:
-
-```bash
-$ ./main_0.py
+## Author
+Hiba Hassanin
